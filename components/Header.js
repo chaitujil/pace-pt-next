@@ -1,83 +1,69 @@
 import Link from 'next/link';
-import {css} from '@emotion/core';
 import styled from '@emotion/styled';
 
 const HeaderContainerDiv = styled.div`
-  padding-top: 20px;
-  width: 100vw;
+  z-index: 1;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 20px;
   display: flex;
-  color: darkblue;
-  align-items: center;
-  justify-content: center;
-  @media (max-width: 900px) {
-     display: block;
-  }
-  border: 2px thin lightgrey;
-  background-color: lightblue;
-`;
-
-const NavItems = styled.ul`
-  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  font-weight: 700;
-  text-align: center;
-  
   @media (max-width: 900px) {
-     display: block;
+     flex-direction: column;
   }
+  border: 1px thin white;
+  background-color: white;
 `;
 
-const navItemCss = css`
-  font-size: 14px;
-  font-family: monospace;
-  text-transform: uppercase;
-  margin-left: 10px;
-  margin-right: 25px;
-  text-decoration: none;
-  list-style: none;
+const NavItem = styled.span`
+  margin-right: 50px;
+  color: #666;
+  padding-top: 10px;
+  font-family: 'Courier New';
   cursor: pointer;
-  padding: 0;
-  &:active {
-    text-decoration: underline;
+  text-decoration: none;
+  
+  a {
+    color: #666;
+    text-decoration: none;
   }
 `;
 
-const Logo = styled.li`
-  ${navItemCss}
+const Title = styled.span`
+  color: darkorange;
   font-size: 2em;
-  font-weight: 500;
-`;
-
-const NavItem = styled.li`
-  ${navItemCss}
-  padding-top: 5px
+  font-weight: 700;
+  font-family: georgia;
 `;
 
 const LogoImg = styled.img`
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   max-width:100%;
   height:auto;
 `;
 
 const Header = () => (
   <HeaderContainerDiv>
-    <nav>
-      <NavItems>
-        <Link href="/">
-          <LogoImg src="../static/pace_pt_final_no_bg.png"/>
-        </Link>
-        <Link href="/">
-          <Logo>
-            Pace Physical Therapy
-          </Logo>
-        </Link>
-        <Link href="/appointment"><NavItem>Appointment</NavItem></Link>
-        <Link href="/contactus"><NavItem>Contact Us</NavItem></Link>
-      </NavItems>
-    </nav>
-
+    <NavItem>
+      <LogoImg src="../static/pace_pt_final_no_bg.png"/>
+    </NavItem>
+    <NavItem>
+      <Link href="/">
+        <Title>
+          Pace Physical Therapy
+        </Title>
+      </Link>
+    </NavItem>
+    <NavItem>
+      <Link href="/appointment"><a>APPOINTMENT</a></Link>
+    </NavItem>
+    <NavItem>
+      <Link href="/contactus"><a>CONTACT US</a></Link>
+    </NavItem>
   </HeaderContainerDiv>
 );
 

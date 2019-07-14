@@ -1,12 +1,17 @@
 import styled from '@emotion/styled';
 
 const Container = styled.div`
-  border: 1px thin lightgrey;
+  background: lightblue;
   padding: 20px;
+  margin: 3% 10% 3% 10%;
   background: none;
   color: grey;
   font-weight: normal;
   font-family: sans-serif;
+  
+  @media (max-width: 900px) {
+     margin: 0;
+  }
 `;
 
 const Boxes = styled.div`
@@ -21,13 +26,17 @@ const Boxes = styled.div`
 `;
 
 const Box = styled.div`
+  background: #E2F9F7;
   margin: 20px;
   border: 2px solid lightgrey;
   border-radius: 5px;
   padding: 20px;
+  align-content: center;
   
   & > h4 {
+    color: #666;
     padding: 20px;
+    text-align: center;
   }
   
   @media (max-width: 900px) {
@@ -38,16 +47,17 @@ const Box = styled.div`
 `;
 
 const Intro = styled.div`
-  padding-bottom: 30px;
+  padding: 10px 50px 50px 50px;
   font-family: sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color: navy;
+  color: #10BEE1;
   text-align: center;
   
   & > p {
-    padding-top: 15px;
-    color: grey;
+    color: #666;
+    padding: 20px;
+    text-align: center;
   }
 `;
 
@@ -71,7 +81,7 @@ const HowCanWeHelp = () => (
 
       <Boxes>
         <Box>
-          <h4>Find The ROOT Cause Of Your Aches & Pains: </h4>
+          <h4>Find The ROOT Cause Of Your Aches & Pains</h4>
           <Content>
             We assess the body as a whole. Often times the cause of pain or an injury extends
             far beyond just the body part or muscle hurting. Without taking a comprehensive look at

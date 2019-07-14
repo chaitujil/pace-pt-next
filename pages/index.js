@@ -1,6 +1,5 @@
 import 'bootstrap/dist/css/bootstrap.css';
 import Layout from '../components/MyLayout.js';
-import styled from '@emotion/styled';
 import MissionStatement from "../components/MissionStatement";
 import HowCanWeHelp from "../components/HowCanWeHelp";
 import OurServices from "../components/OurServices";

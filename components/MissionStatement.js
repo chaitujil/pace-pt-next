@@ -1,14 +1,20 @@
-import {css} from '@emotion/core';
 import styled from '@emotion/styled';
 
 const MissionStatementDiv = styled.div`
   border: 1px thin lightgrey;
   padding: 40px;
+  margin-left: 25%;
+  margin-right: 25%;
   font-size: 28px;
-  font-weight: normal;
-  color: navy;
-  font-family: monospace;
+  font-weight: bold;
+  color: rgb(28, 56, 85);
+  font-family: 'Montserrat';
   background-color: white;
+  
+  @media (max-width: 900px) {
+     margin-left: 5%;
+     margin-right: 5%;
+  }
 `;
 
 const MissionStatement = () => (
