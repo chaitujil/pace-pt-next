@@ -19,6 +19,28 @@ const Container = styled.div`
   }
 `;
 
+const TopDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 900px) {
+     flex-direction: column;
+  }
+  border: 1px thin white;
+  background-color: white;
+`;
+
+const TopItem = styled.span`
+  margin-right: 50px;
+  color: #666;
+  padding-top: 10px;
+  font-family: 'Courier New';
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+`;
+
 const NavDiv = styled.div`
   display: flex;
   flex-direction: row;
@@ -61,14 +83,17 @@ const LogoImg = styled.img`
 
 const Header = () => (
   <Container>
-    <NavDiv>
-      <NavItem>
+    <TopDiv>
+      <TopItem>
         408-628-0447
-      </NavItem>
-      <NavItem>
-        Care hours: M - F: 8AM - 7PM, Sat: 9AM - 1PM
-      </NavItem>
-    </NavDiv>
+      </TopItem>
+      <TopItem>
+        3880 S Bascom Ave, Ste 106, San jose, CA 95124
+      </TopItem>
+      <TopItem>
+        Care hours:M - F 8AM - 7PM, Sat 9AM - 1PM
+      </TopItem>
+    </TopDiv>
     <NavDiv>
       <NavItem>
         <LogoImg src="../static/pace_pt_final_no_bg.png"/>
