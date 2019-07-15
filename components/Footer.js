@@ -51,6 +51,7 @@ const Boxes = styled.div`
   
   @media (max-width: 900px) {
      flex-direction: column;
+     text-align: center;
   }
 `;
 
@@ -83,13 +84,13 @@ const Footer = () => (
           <h4>Quick links</h4>
           <Column>
             <Box>
-              <Link href="/">HOME</Link>
+              <Link href="/" as="/"><a>HOME</a></Link>
             </Box>
             <Box>
-              <Link href="/appointment">APPOINTMENT</Link>
+              <Link href="/appointment" as="/appointment"><a>APPOINTMENT</a></Link>
             </Box>
             <Box>
-              <Link href="/contactus">CONTACT US</Link>
+              <Link href="/contactus" as="/contactus"><a>CONTACT US</a></Link>
             </Box>
           </Column>
         </Box>

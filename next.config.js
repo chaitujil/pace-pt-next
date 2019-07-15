@@ -1,4 +1,10 @@
 const withCSS = require('@zeit/next-css');
 module.exports = withCSS({
-  /* config options here */
+  exportPathMap: function () {
+    return {
+      '/': { page: '/' },
+      '/appointment': { page: '/appointment' },
+      '/contactus': { page: '/contactus' }
+    }
+  }
 });

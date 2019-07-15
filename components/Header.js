@@ -1,12 +1,25 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
 
-const HeaderContainerDiv = styled.div`
+const Container = styled.div`
   z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  border: 1px thin white;
+  background-color: white;
+  
+  @media (max-width: 900px) {
+     position: relative;
+  }
+`;
+
+const NavDiv = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -47,24 +60,34 @@ const LogoImg = styled.img`
 `;
 
 const Header = () => (
-  <HeaderContainerDiv>
-    <NavItem>
-      <LogoImg src="../static/pace_pt_final_no_bg.png"/>
-    </NavItem>
-    <NavItem>
-      <Link href="/">
-        <Title>
-          Pace Physical Therapy
-        </Title>
-      </Link>
-    </NavItem>
-    <NavItem>
-      <Link href="/appointment"><a>APPOINTMENT</a></Link>
-    </NavItem>
-    <NavItem>
-      <Link href="/contactus"><a>CONTACT US</a></Link>
-    </NavItem>
-  </HeaderContainerDiv>
+  <Container>
+    <NavDiv>
+      <NavItem>
+        408-628-0447
+      </NavItem>
+      <NavItem>
+        Care hours: M - F: 8AM - 7PM, Sat: 9AM - 1PM
+      </NavItem>
+    </NavDiv>
+    <NavDiv>
+      <NavItem>
+        <LogoImg src="../static/pace_pt_final_no_bg.png"/>
+      </NavItem>
+      <NavItem>
+        <Link href="/" as="/">
+          <Title>
+            Pace Physical Therapy
+          </Title>
+        </Link>
+      </NavItem>
+      <NavItem>
+        <Link href="/appointment" as="/appointment"><a>APPOINTMENT</a></Link>
+      </NavItem>
+      <NavItem>
+        <Link href="/contactus" as="/contactus"><a>CONTACT US</a></Link>
+      </NavItem>
+    </NavDiv>
+  </Container>
 );
 
 export default Header;

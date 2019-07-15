@@ -46,6 +46,10 @@ const AccordionWrapper = styled.div`
     cursor: pointer;
     display: flex;
     justify-content: center;
+      
+    :hover {
+      background-color: lightgrey;
+    }
   }
 `;
 
