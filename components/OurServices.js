@@ -40,7 +40,7 @@ const ContentWrapper = styled.div`
     font-family: sans-serif;
     font-weight: 700;
     font-size: 16px;
-    color: #4d0000;
+    color: #666;
   }
 `;
 

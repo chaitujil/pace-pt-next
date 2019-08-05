@@ -74,9 +74,9 @@ app.prepare()
     server.use(bodyParser.urlencoded({ extended: true }));
     server.use(bodyParser.json());
 
-    server.get(/next/, (req,res)=> { console.log("next"); handle(req,res); });
+    server.get(/next/, (req,res)=> { handle(req,res); });
 
-    server.get(/webpack/, (req,res)=> { console.log("webpack"); handle(req,res); });
+    server.get(/webpack/, (req,res)=> { handle(req,res); });
 
     server.get('*', (req, res) => {
       return handle(req, res)
@@ -93,7 +93,7 @@ app.prepare()
 
     server.listen(3000, (err) => {
       if (err) throw err;
-      console.log('> Pace physical therapy website served on http://localhost:3000')
+      console.log('> Website served on http://localhost:3000')
     })
   })
   .catch((ex) => {
