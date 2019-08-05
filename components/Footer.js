@@ -16,7 +16,6 @@ const FooterContainer = styled.div`
 `;
 
 const FooterTop = styled.div`
-  width: 100%;
   padding: 1px;
 `;
 
@@ -34,13 +33,35 @@ const FooterBottom = styled.div`
 `;
 
 const FbIcon = styled.span`
-  padding: 2px;
-  text-align: center;
+  background: url("../static/soc_f.png") no-repeat center;
+  cursor: pointer;
+  margin: 10px 10px;
+  padding: 0;
+  float: left;
+  list-style: none outside none;
+  height: 51px;
+  width: 51px;
+  display: block;
+  
+  :hover {
+    background: url("../static/soc_f_h.png") no-repeat center;
+  }
 `;
 
 const LinkedInIcon = styled.span`
-  padding: 2px;
-  text-align: center;
+  background: url("../static/soc_i.png") no-repeat center;
+  cursor: pointer;
+  margin: 10px 10px;
+  padding: 0;
+  float: left;
+  list-style: none outside none;
+  height: 51px;
+  width: 51px;
+  display: block;
+  
+  :hover {
+    background: url("../static/soc_i_h.png") no-repeat center;
+  }
 `;
 
 const Boxes = styled.div`
@@ -72,10 +93,13 @@ const Address = styled.span`
 
 const Footer = () => (
   <FooterContainer>
+    <iframe
+  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3175.522047034687!2d-121.94901088485408!3d37.25904594943599!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808e3453511d6d75%3A0xcf7e905621c72dcc!2s3880+S+Bascom+Ave+%23106%2C+San+Jose%2C+CA+95124!5e0!3m2!1sen!2sus!4v1552959714221"
+  width="100%" height="500px" frameBorder="0" allowFullScreen/>
     <FooterTop>
       <Boxes>
-        <FbIcon>FB</FbIcon>
-        <LinkedInIcon>LI</LinkedInIcon>
+        <a href={"https://www.facebook.com/pacephysicaltherapyinc"}><FbIcon /></a>
+        <a href={"https://www.linkedin.com/in/vidyadevarapalli"}><LinkedInIcon/></a>
       </Boxes>
     </FooterTop>
     <FooterMiddle>

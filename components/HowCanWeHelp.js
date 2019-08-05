@@ -3,7 +3,7 @@ import styled from '@emotion/styled';
 const Container = styled.div`
   background: lightblue;
   padding: 20px;
-  margin: 3% 10% 3% 10%;
+  margin: 2% 5% 2% 5%;
   background: none;
   color: grey;
   font-weight: normal;
@@ -47,7 +47,7 @@ const Box = styled.div`
 `;
 
 const Intro = styled.div`
-  padding: 10px 50px 50px 50px;
+  padding: 10px 25px 10px 25px;
   font-family: sans-serif;
   font-weight: 700;
   font-size: 18px;

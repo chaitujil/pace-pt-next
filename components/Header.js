@@ -6,7 +6,7 @@ const Container = styled.div`
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 20px;
+  padding: 5px 20px 5px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -36,7 +36,7 @@ const TopItem = styled.span`
   color: #666;
   padding-top: 10px;
   font-family: 'Courier New';
-  font-size: 14px;
+  font-size: 12px;
   font-weight: bold;
   cursor: pointer;
 `;
@@ -85,7 +85,7 @@ const Header = () => (
   <Container>
     <TopDiv>
       <TopItem>
-        408-628-0447
+        Ph: 408-628-0447
       </TopItem>
       <TopItem>
         3880 S Bascom Ave, Ste 106, San jose, CA 95124

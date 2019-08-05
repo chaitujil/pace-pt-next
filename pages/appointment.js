@@ -5,6 +5,7 @@ import React from "react";
 import {Formik, Field} from "formik";
 import * as yup from 'yup';
 import {css} from "emotion";
+import * as axios from "axios";
 
 const Container = styled.div`
   margin: 40px 10% 40px 10%;
@@ -22,10 +23,10 @@ const formClass = css`
 
 const formField = css`
   border: 1px solid darkgrey;
-  margin: 4% 5px 1% 2%;
+  margin: 20px 20px 20px 10px;
   border-radius: 5px;
   padding: 5px;
-  width: 50%;
+  width: 400px;
   color: #666
   outline: none;
 `;
@@ -34,9 +35,9 @@ const specificConcernField = css`
   color: #666;
   border: 1px solid darkgrey;
   border-radius: 5px;
-  margin: 4% 5px 1% 2%;
+  margin: 20px 20px 20px 10px;
   padding: 5px;
-  width: 50%;
+  width: 400px;
   height: 200px;
   max-height: 200px;
   outline: none;
@@ -103,9 +104,17 @@ const userSchema = yup.object().shape({
 
 function Appointment(props) {
   const onSubmit = (values, {resetForm}) => {
-    console.log(values);
+    console.log(JSON.stringify(values));
 
-    resetForm(initialState);
+    axios.post('/api/contact', values)
+    .then((res) => {
+      if (res.status === 200) {
+        console.log(res.data);
+        resetForm(initialState);
+      } else {
+        console.log("Failed");
+      }
+    })
   };
 
   return (
@@ -221,7 +230,7 @@ function Appointment(props) {
                     onChange={props.handleChange}
                     value={props.values.best_time}
                     type="text"
-                    placeholder="Best Time"
+                    placeholder="Best Time To Call"
                     className={formField}
                   />
                   {props.errors.best_time && props.touched.best_time ? (
