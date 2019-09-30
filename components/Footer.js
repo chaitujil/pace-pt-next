@@ -79,6 +79,10 @@ const Boxes = styled.div`
 const Box = styled.div`
   width: 100%;
   padding: 1% 5% 1% 5%;
+  
+  a {
+    display: contents;
+  }
 `;
 
 const Column = styled.span`
@@ -121,7 +125,8 @@ const Footer = () => (
         <Box>
           <Column>
             <h4>Contact Us</h4>
-            Phone Number : +1 408-628-0447 <br/>
+            Phone Number : <a href="tel:408-628-0447">408-628-0447</a> <br/>
+            Fax : 669-201-0478 <br/>
             <a href="mailto:info@paceptclinic.com">Email : info@paceptclinic.com</a>
           </Column>
         </Box>

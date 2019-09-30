@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
+import React from "react";
 
 const Container = styled.div`
   z-index: 1;
@@ -39,6 +40,10 @@ const TopItem = styled.span`
   font-size: 12px;
   font-weight: bold;
   cursor: pointer;
+  
+  a {
+    display: inline-block;
+  }
 `;
 
 const NavDiv = styled.div`
@@ -85,7 +90,10 @@ const Header = () => (
   <Container>
     <TopDiv>
       <TopItem>
-        Ph: 408-628-0447
+        Ph: <a href="tel:408-628-0447">408-628-0447</a>
+      </TopItem>
+      <TopItem>
+        Fax: 669-201-0478
       </TopItem>
       <TopItem>
         3880 S Bascom Ave, Ste 106, San jose, CA 95124

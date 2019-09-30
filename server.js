@@ -1,7 +1,7 @@
 const express = require('express');
 const next = require('next');
 const sgMail = require('@sendgrid/mail');
-sgMail.setApiKey("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");
+sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
 
 const send = (request) => {
   const from = "info@paceptclinic.com";
@@ -92,7 +92,7 @@ app.prepare()
     });
 
     const PORT = process.env.PORT || 3000;
-    server.listen(PORT, () => {
+    server.listen(PORT, "0.0.0.0", () => {
       console.log(`Paceptclinic is running on port ${ PORT }`);
     });
   })
