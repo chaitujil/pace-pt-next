@@ -48,7 +48,7 @@ const AboutMe = () => (
       <Column>
         <h3>Vidya Devarapalli, DPT</h3>
         <Description>
-          Graduated from the prestigious Touro College of Health Sciences with a Doctor of
+          Graduated from the prestigious Touro College of Health Sciences (NYU) with a Doctor of
           Physical Therapy Degree, Vidya completed her Master's at Nizams Institute of Medical Sciences
           (Hyderabad, IN)
           and Bachelor's at Sanjeevani College of Physiotherapy (Hyderabad, IN). She has worked in various
