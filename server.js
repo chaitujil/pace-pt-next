@@ -91,10 +91,10 @@ app.prepare()
       res.send('success')
     });
 
-    server.listen(3000, (err) => {
-      if (err) throw err;
-      console.log('> Website served on http://localhost:3000')
-    })
+    const PORT = process.env.PORT || 3000;
+    server.listen(PORT, () => {
+      console.log(`Paceptclinic is running on port ${ PORT }`);
+    });
   })
   .catch((ex) => {
     console.error(ex.stack);
