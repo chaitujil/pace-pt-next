@@ -15,15 +15,17 @@ const Container = styled.div`
 const ProfilePicture = styled.img`
   max-width: 100%;
   height: auto;
+  box-shadow: 0px 0px 0px 0px rgb(202, 180, 152), 0px 5px 5px 0px rgb(202, 180, 152), 0px 5px 5px -5px rgb(202, 180, 152);
 `;
 
 const Description = styled.p`
   font-family: 'sans-serif';
+  font-weight: 400;
   margin-top: 10px;
 `;
 
 const Tag = styled.p`
-  margin: 10px;
+  margin: 20px 10px 20px 10px;
   font-style: italic;
   font-family: "san-serif"
 `;

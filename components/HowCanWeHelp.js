@@ -27,7 +27,7 @@ const Boxes = styled.div`
 
 const Box = styled.div`
   background: #FEECD3;
-  box-shadow: 0px 0px 0px 0px rgb(202, 180, 152), 0px 5px 5px 0px rgb(202, 180, 152), 0px 10px 5px -5px rgb(202, 180, 152);
+  box-shadow: 0px 0px 0px 0px rgb(202, 180, 152), 0px 5px 5px 0px rgb(202, 180, 152), 0px 5px 5px -5px rgb(202, 180, 152);
   margin: 20px;
   padding: 20px;
   align-content: center;
@@ -41,7 +41,7 @@ const Box = styled.div`
   @media (max-width: 900px) {
      width: 100%;
      padding: 5px;
-     margin: 5px;
+     margin: 20px 5px 5px 0px;
   }
 `;
 

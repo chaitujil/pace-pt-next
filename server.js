@@ -6,10 +6,10 @@ const dotenv = require('dotenv').config();
 sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
 
 const send = (request) => {
-  const from = "info@paceptclinic.com";
+  const from = "vidya@paceptclinic.com";
   const msgToPatient = {
     to: `${request.email}`,
-    from: "info@paceptclinic.com",
+    from: "vidya@paceptclinic.com",
     subject: `Appointment request has been received for ${request.name}`,
     html: '<html lang="en">\n' +
       '<head>\n' +
@@ -36,8 +36,8 @@ const send = (request) => {
   sgMail.send(msgToPatient);
 
   const msgToClinic = {
-    to: `info@paceptclinic.com`,
-    from: `info@paceptclinic.com`,
+    to: `vidya@paceptclinic.com`,
+    from: `vidya@paceptclinic.com`,
     subject: `[PACEPTCLINIC.COM] Appointment Request from ${request.name}`,
     html: '<html lang="en">\n' +
       '<head>\n' +

@@ -29,6 +29,10 @@ const formField = css`
   width: 400px;
   color: #666
   outline: none;
+  
+  @media (max-width: 900px) {
+    margin: 20px 20px 20px -10px;
+  }
 `;
 
 const specificConcernField = css`
@@ -41,6 +45,10 @@ const specificConcernField = css`
   height: 200px;
   max-height: 200px;
   outline: none;
+  
+  @media (max-width: 900px) {
+    margin: 20px 20px 20px -10px;
+  }
 `;
 
 
@@ -68,6 +76,11 @@ const submitButton = css`
   :hover {
     color: darkorange;
     background-color: green;
+  }
+  
+  @media (max-width: 900px) {
+     width: 40%;
+     margin: 2% 0 0 -2%;
   }
 `;
 
