@@ -135,8 +135,8 @@ function OurServices() {
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
-                  Common conditions are sprains , heel pain , Achilles tendinitis , metatarsalgia , plantar fasciitis,
-                  Tarsal tunnel syndrome etc..
+                  Common conditions are Sprains, Heel pain, Achilles Tendinitis, Metatarsalgia, Plantar Fasciitis,
+                  Tarsal Tunnel Syndrome etc.
                   Ankle is a very complex and strong joint that can bear weight in very dynamic and demanding
                   situations. Injuries can occur through over use or acute incidents. If you ever felt sharp pain in
                   your foot while taking initial steps during walking in the morning or pain in the heel at the end of
@@ -182,7 +182,7 @@ function OurServices() {
               <ExpansionPanelDetails>
                 <Typography>
                   Common conditions that affect elbow are Tennis elbow/ lateral epicondylitis,
-                  Golfers Elbow/medial epicondylitis . One may develop these symptoms not only by playing tennis
+                  Golfers Elbow/medial Epicondylitis . One may develop these symptoms not only by playing tennis
                   or golf but also by repetitive stress such as typing or any other twisting motions of elbow,
                   throwing the ball in a wrong angle causes the stress on tendons of the elbow.
 
