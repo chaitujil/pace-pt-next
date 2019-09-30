@@ -49,7 +49,7 @@ const Intro = styled.div`
   padding: 10px 25px 10px 25px;
   font-family: sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 15px;
   color: #97680A;
   text-align: center;
   
@@ -71,7 +71,7 @@ const HowCanWeHelp = () => (
   <section>
     <Container>
       <Intro>
-        <h2>How Can We Help You?</h2>
+        <h4>How Can We Help You?</h4>
 
         <p>When it comes to your family’s health, you need the best. We pride ourselves on offering the best
           possible physical therapy available and going above and beyond for our

@@ -5,7 +5,7 @@ const MissionStatementDiv = styled.div`
   padding: 20px;
   margin-left: 25%;
   margin-right: 25%;
-  font-size: 28px;
+  font-size: 20px;
   font-weight: bold;
   color: rgb(28, 56, 85);
   font-family: 'Montserrat';

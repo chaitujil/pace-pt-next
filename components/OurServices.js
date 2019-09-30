@@ -54,9 +54,9 @@ function OurServices() {
       <section>
         <Container>
           <Heading>
-            <h2>
+            <h4>
               OUR <span className="services">SERVICES</span>
-            </h2>
+            </h4>
             We treat a variety of conditions
           </Heading>
 

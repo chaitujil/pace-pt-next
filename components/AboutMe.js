@@ -23,6 +23,7 @@ const Description = styled.p`
 `;
 
 const Tag = styled.p`
+  margin: 10px;
   font-style: italic;
   font-family: "san-serif"
 `;
