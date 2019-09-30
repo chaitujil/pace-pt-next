@@ -31,7 +31,8 @@ const formField = css`
   outline: none;
   
   @media (max-width: 900px) {
-    margin: 20px 20px 20px -10px;
+    width: 100%;
+    margin: 20px 20px 20px -20px;
   }
 `;
 
@@ -47,7 +48,8 @@ const specificConcernField = css`
   outline: none;
   
   @media (max-width: 900px) {
-    margin: 20px 20px 20px -10px;
+    width: 100%;
+    margin: 20px 20px 20px -20px;
   }
 `;
 
