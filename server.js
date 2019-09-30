@@ -1,6 +1,8 @@
 const express = require('express');
 const next = require('next');
 const sgMail = require('@sendgrid/mail');
+
+const dotenv = require('dotenv').config();
 sgMail.setApiKey(process.env.SEND_GRID_API_KEY);
 
 const send = (request) => {
