@@ -26,7 +26,7 @@ const Heading = styled.div`
   font-family: sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color: #10BEE1;
+  color: #97680A;
   text-align: center;
   
   .services {

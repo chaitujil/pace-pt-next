@@ -26,10 +26,9 @@ const Boxes = styled.div`
 `;
 
 const Box = styled.div`
-  background: #E2F9F7;
+  background: #FEECD3;
+  box-shadow: 0px 0px 0px 0px rgb(202, 180, 152), 0px 5px 5px 0px rgb(202, 180, 152), 0px 10px 5px -5px rgb(202, 180, 152);
   margin: 20px;
-  border: 2px solid lightgrey;
-  border-radius: 5px;
   padding: 20px;
   align-content: center;
   
@@ -51,7 +50,7 @@ const Intro = styled.div`
   font-family: sans-serif;
   font-weight: 700;
   font-size: 18px;
-  color: #10BEE1;
+  color: #97680A;
   text-align: center;
   
   & > p {
