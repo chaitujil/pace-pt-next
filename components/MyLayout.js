@@ -1,6 +1,7 @@
 import Header from './Header';
 import styled from "@emotion/styled";
 import Footer from "./Footer";
+import Meta from "./Meta";
 
 const BodyContainer = styled.div`
   background-color: white;
@@ -20,6 +21,7 @@ const Container = styled.div`
 
 const Layout = props => (
   <BodyContainer>
+    <Meta />
     <Header/>
     <Container>
       {props.children}
