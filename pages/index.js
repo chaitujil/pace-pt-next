@@ -4,8 +4,10 @@ import MissionStatement from "../components/MissionStatement";
 import HowCanWeHelp from "../components/HowCanWeHelp";
 import OurServices from "../components/OurServices";
 import AboutMe from "../components/AboutMe";
+import Meta from "../components/Meta";
 
 const Index = props => (
+  <Meta />
   <Layout>
     <MissionStatement/>
 
