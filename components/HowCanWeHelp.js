@@ -1,7 +1,24 @@
 import styled from '@emotion/styled';
 
+import React from 'react';
+import {makeStyles} from '@material-ui/core/styles';
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Typography from '@material-ui/core/Typography';
+
+const useStyles = makeStyles({
+  card: {
+    maxWidth: 500,
+    margin: "1rem"
+  },
+  media: {
+    height: 200,
+  },
+});
+
 const Container = styled.div`
-  background: lightblue;
   padding: 20px;
   margin: 2% 5% 2% 5%;
   background: none;
@@ -14,102 +31,102 @@ const Container = styled.div`
   }
 `;
 
+const Heading = styled.div`
+  text-align: center;
+  
+  h2,h3,h4 {
+    color: #97680A;
+  }
+`;
+
 const Boxes = styled.div`
   display: flex;
-  just-content: space-between;
+  justify-content: space-around;
   
   @media (max-width: 900px) {
      display: block;
-     padding: 5px;
-     margin: 5px;
+     margin: 2rem;
   }
-`;
-
-const Box = styled.div`
-  background: #FEECD3;
-  box-shadow: 0px 0px 0px 0px rgb(202, 180, 152), 0px 5px 5px 0px rgb(202, 180, 152), 0px 5px 5px -5px rgb(202, 180, 152);
-  margin: 20px;
-  padding: 20px;
-  align-content: center;
-  
-  & > h4 {
-    color: #666;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  @media (max-width: 900px) {
-     width: 100%;
-     padding: 5px;
-     margin: 20px 5px 5px 0px;
-  }
-`;
-
-const Intro = styled.div`
-  padding: 10px 25px 10px 25px;
-  font-family: sans-serif;
-  font-weight: 700;
-  font-size: 15px;
-  color: #97680A;
-  text-align: center;
-  
-  & > p {
-    color: #666;
-    padding: 20px;
-    text-align: center;
-  }
-`;
-
-const Content = styled.div`
-  align: center;
-  display: block;
-  padding: 0 10px;
-  font-size: 14px;
 `;
 
 const HowCanWeHelp = () => (
   <section>
     <Container>
-      <Intro>
-        <h4>How Can We Help You?</h4>
-
-        <p>When it comes to your family’s health, you need the best. We pride ourselves on offering the best
+      <Heading>
+        <Typography gutterBottom variant="h5" component="h4">
+          How Can We Help You?
+        </Typography>
+        <Typography gutterBottom variant="body2" component="p">
+          When it comes to your family’s health, you need the best. We pride ourselves on offering the best
           possible physical therapy available and going above and beyond for our
-          patients. </p>
-      </Intro>
+          patients.
+        </Typography>
+      </Heading>
 
       <Boxes>
-        <Box>
-          <h4>Find The ROOT Cause Of Your Aches & Pains</h4>
-          <Content>
-            We assess the body as a whole. Often times the cause of pain or an injury extends
-            far beyond just the body part or muscle hurting. Without taking a comprehensive look at
-            your entire self, we would be doing you a disservice in fully helping you heal
-            and preventing future limitations.
-          </Content>
-        </Box>
+        <Card className={useStyles().card}>
+          <CardActionArea>
+            <CardMedia
+              className={useStyles().media}
+              image="../static/slider_image2.jpg"
+              title="Find The ROOT Cause Of Your Aches & Pains"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Find The ROOT Cause Of Your Aches & Pains
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                We assess the body as a whole. Often times the cause of pain or an injury extends
+                far beyond just the body part or muscle hurting. Without taking a comprehensive look at
+                your entire self, we would be doing you a disservice in fully helping you heal
+                and preventing future limitations.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
 
-        <Box>
-          <h4>Fix YOUR Areas Of Limitation</h4>
-          <Content>
-            Not all diagnoses are created equal. One person with low back pain may
-            have completely different limitations than the next person. Your recovery program needs
-            to be specific to what YOUR body needs and not just the typical exercise program that
-            you can find online to band-aid the real issue.
-          </Content>
-        </Box>
+        <Card className={useStyles().card}>
+          <CardActionArea>
+            <CardMedia
+              className={useStyles().media}
+              image="../static/slider_image3.jpeg"
+              title="Fix YOUR Areas Of Limitation"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Fix YOUR Areas Of Limitation
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                Not all diagnoses are created equal. One person with low back pain may
+                have completely different limitations than the next person. Your recovery program needs
+                to be specific to what YOUR body needs and not just the typical exercise program that
+                you can find online to band-aid the real issue.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
 
-
-        <Box>
-          <h4>Focus On Function At An Optimal ​Level</h4>
-          <Content>
-            We get you back to living your best life. Just because your pain decreases
-            or you can walk longer doesn't mean that is enough to get you functioning at the level
-            you want to be. While this often signifies the end of care at your typical PT clinic,
-            we don't stop providing guidance until we help you successfully meet every goal you set
-            for yourself with us on day one.
-          </Content>
-        </Box>
+        <Card className={useStyles().card}>
+          <CardActionArea>
+            <CardMedia
+              className={useStyles().media}
+              image="../static/slider_image4.jpg"
+              title="Focus On Function At An Optimal ​Level"
+            />
+            <CardContent>
+              <Typography gutterBottom variant="h5" component="h2">
+                Focus On Function At An Optimal ​Level
+              </Typography>
+              <Typography variant="body2" color="textSecondary" component="p">
+                We get you back to living your best life. Just because your pain decreases
+                or you can walk longer doesn't mean that is enough to get you functioning at the level
+                you want to be. While this often signifies the end of care at your typical PT clinic,
+                we don't stop providing guidance until we help you successfully meet every goal you set
+                for yourself with us on day one.
+              </Typography>
+            </CardContent>
+          </CardActionArea>
+        </Card>
       </Boxes>
     </Container>
   </section>

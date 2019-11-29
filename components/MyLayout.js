@@ -15,6 +15,10 @@ const BodyContainer = styled.div`
 const Container = styled.div`
   padding-top: 10%;
   margin: 0px;
+  
+  @media (max-width: 900px) {
+     padding-top: 2%;
+  }
 `;
 
 

@@ -6,11 +6,43 @@ import {Formik, Field} from "formik";
 import * as yup from 'yup';
 import {css} from "emotion";
 import * as axios from "axios";
+import CardMedia from "@material-ui/core/CardMedia";
+
+const imageCss = css`
+  width: 800px;
+  height: 800px;
+  
+  @media (max-width: 900px) {
+    width: 0;
+    height: 0;
+  }
+`;
 
 const Container = styled.div`
-  margin: 40px 10% 40px 10%;
+  margin: 20px;
   padding: 10px;
   z-index: 1;
+  
+  @media (max-width: 900px) {
+     margin: 20px;
+  }
+`;
+
+const Boxes = styled.div`
+  display: flex;
+  justify-content: space-between;
+  
+  @media (max-width: 900px) {
+     display: block;
+     margin: 2rem;
+  }
+`;
+
+const Box = styled.div`
+  @media (max-width: 900px) {
+     width: 100%;
+     padding: 5px;
+  }
 `;
 
 const formClass = css`
@@ -64,7 +96,7 @@ const errorMessage = css`
 
 const submitButton = css`
   margin: 2% 0 0 2%;
-  width: 10%;
+  width: 30%;
   border: none;
   outline: none;
   border-radius: 10px;
@@ -140,8 +172,8 @@ function Appointment(props) {
             <h2>APPOINTMENT</h2>
           </div>
         </section>
-        <section>
-          <React.Fragment>
+        <Boxes>
+          <Box>
             <Formik
               initialValues={initialState}
               onSubmit={onSubmit}
@@ -159,58 +191,6 @@ function Appointment(props) {
                   />
                   {props.errors.name && props.touched.name ? (
                     <span className={errorMessage}>{props.errors.name}</span>
-                  ) : (
-                    ""
-                  )}
-                  <Field
-                    type="address"
-                    placeholder="Enter address"
-                    onChange={props.handleChange}
-                    name="address"
-                    value={props.values.address}
-                    className={formField}
-                  />
-                  {props.errors.address && props.touched.address ? (
-                    <span className={errorMessage}>{props.errors.address}</span>
-                  ) : (
-                    ""
-                  )}
-                  <Field
-                    type="city"
-                    placeholder="Enter city"
-                    onChange={props.handleChange}
-                    name="city"
-                    value={props.values.city}
-                    className={formField}
-                  />
-                  {props.errors.city && props.touched.city ? (
-                    <span className={errorMessage}>{props.errors.city}</span>
-                  ) : (
-                    ""
-                  )}
-                  <Field
-                    type="state"
-                    placeholder="Enter state"
-                    onChange={props.handleChange}
-                    name="state"
-                    value={props.values.state}
-                    className={formField}
-                  />
-                  {props.errors.state && props.touched.state ? (
-                    <span className={errorMessage}>{props.errors.state}</span>
-                  ) : (
-                    ""
-                  )}
-                  <Field
-                    type="zipcode"
-                    placeholder="Enter zipcode"
-                    onChange={props.handleChange}
-                    name="zipcode"
-                    value={props.values.zipcode}
-                    className={formField}
-                  />
-                  {props.errors.zipcode && props.touched.zipcode ? (
-                    <span className={errorMessage}>{props.errors.zipcode}</span>
                   ) : (
                     ""
                   )}
@@ -241,11 +221,63 @@ function Appointment(props) {
                     ""
                   )}
                   <Field
+                    type="address"
+                    placeholder="Enter address (Optional)"
+                    onChange={props.handleChange}
+                    name="address"
+                    value={props.values.address}
+                    className={formField}
+                  />
+                  {props.errors.address && props.touched.address ? (
+                    <span className={errorMessage}>{props.errors.address}</span>
+                  ) : (
+                    ""
+                  )}
+                  <Field
+                    type="city"
+                    placeholder="Enter city (Optional)"
+                    onChange={props.handleChange}
+                    name="city"
+                    value={props.values.city}
+                    className={formField}
+                  />
+                  {props.errors.city && props.touched.city ? (
+                    <span className={errorMessage}>{props.errors.city}</span>
+                  ) : (
+                    ""
+                  )}
+                  <Field
+                    type="state"
+                    placeholder="Enter state (Optional)"
+                    onChange={props.handleChange}
+                    name="state"
+                    value={props.values.state}
+                    className={formField}
+                  />
+                  {props.errors.state && props.touched.state ? (
+                    <span className={errorMessage}>{props.errors.state}</span>
+                  ) : (
+                    ""
+                  )}
+                  <Field
+                    type="zipcode"
+                    placeholder="Enter zipcode (Optional)"
+                    onChange={props.handleChange}
+                    name="zipcode"
+                    value={props.values.zipcode}
+                    className={formField}
+                  />
+                  {props.errors.zipcode && props.touched.zipcode ? (
+                    <span className={errorMessage}>{props.errors.zipcode}</span>
+                  ) : (
+                    ""
+                  )}
+                  <Field
                     name="best_time"
                     onChange={props.handleChange}
                     value={props.values.best_time}
                     type="text"
-                    placeholder="Best Time To Call"
+                    placeholder="Best Time To Call (Optional)"
                     className={formField}
                   />
                   {props.errors.best_time && props.touched.best_time ? (
@@ -258,7 +290,7 @@ function Appointment(props) {
                     onChange={props.handleChange}
                     value={props.values.specific_concern}
                     component="textarea"
-                    placeholder="Specific Concern"
+                    placeholder="Specific Concern (Optional)"
                     className={specificConcernField}
                   />
                   {props.errors.specific_concern && props.touched.specific_concern ? (
@@ -271,7 +303,7 @@ function Appointment(props) {
                     onChange={props.handleChange}
                     value={props.values.referred_by}
                     type="text"
-                    placeholder="How did you hear about us?"
+                    placeholder="How did you hear about us? (Optional)"
                     className={formField}
                   />
                   {props.errors.referred_by && props.touched.referred_by ? (
@@ -289,8 +321,14 @@ function Appointment(props) {
                 </form>
               )}
             </Formik>
-          </React.Fragment>
-        </section>
+          </Box>
+          <Box>
+            <CardMedia className={imageCss}
+              image="/static/back_pain.jpg"
+              title="Back Pain"
+            />
+          </Box>
+        </Boxes>
       </Container>
     </Layout>
   )
