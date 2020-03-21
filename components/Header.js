@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
 import React from "react";
+import {FaCalendarAlt, FaFax, FaPhone, FaMapMarkerAlt, FaClock, FaPhoneSquare} from 'react-icons/fa';
 
 const Container = styled.div`
   z-index: 1;
@@ -90,16 +91,16 @@ const Header = () => (
   <Container>
     <TopDiv>
       <TopItem>
-        Ph: <a href="tel:408-628-0447">408-628-0447</a>
+        <FaPhone/> <a href="tel:408-628-0447">408-628-0447</a>
       </TopItem>
       <TopItem>
-        Fax: 669-201-0478
+        <FaFax/> Fax: 669-201-0478
       </TopItem>
       <TopItem>
-        3880 S Bascom Ave, Ste 106, San jose, CA 95124
+        <FaMapMarkerAlt/> 3880 S Bascom Ave, #106, San jose, CA 95124
       </TopItem>
       <TopItem>
-        Care hours:M - F 8AM - 7PM, Sat 9AM - 1PM
+        <FaClock/> Care hours:M - F 8AM - 7PM, Sat 9AM - 1PM
       </TopItem>
     </TopDiv>
     <NavDiv>
@@ -114,10 +115,12 @@ const Header = () => (
         </Link>
       </NavItem>
       <NavItem>
-        <Link href="/appointment" as="/appointment"><a>APPOINTMENT</a></Link>
+        <FaCalendarAlt/>
+        <Link href="/appointment" as="/appointment"><a> APPOINTMENT</a></Link>
       </NavItem>
       <NavItem>
-        <Link href="/contactus" as="/contactus"><a>CONTACT US</a></Link>
+        <FaPhoneSquare/>
+        <Link href="/contactus" as="/contactus"><a> CONTACT US</a></Link>
       </NavItem>
     </NavDiv>
   </Container>

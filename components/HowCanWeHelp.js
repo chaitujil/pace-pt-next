@@ -8,6 +8,8 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 
+import {FaHandsHelping, FaHandPointRight} from 'react-icons/fa';
+
 const useStyles = makeStyles({
   card: {
     maxWidth: 500,
@@ -54,7 +56,7 @@ const HowCanWeHelp = () => (
     <Container>
       <Heading>
         <Typography gutterBottom variant="h5" component="h4">
-          How Can We Help You?
+          <FaHandsHelping/> How Can We Help You?
         </Typography>
         <Typography gutterBottom variant="body2" component="p">
           When it comes to your family’s health, you need the best. We pride ourselves on offering the best
@@ -73,7 +75,7 @@ const HowCanWeHelp = () => (
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Find The ROOT Cause Of Your Aches & Pains
+                <FaHandPointRight/> Find The ROOT Cause Of Your Aches & Pains
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 We assess the body as a whole. Often times the cause of pain or an injury extends
@@ -94,7 +96,7 @@ const HowCanWeHelp = () => (
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Fix YOUR Areas Of Limitation
+                <FaHandPointRight/> Fix YOUR Areas Of Limitation
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 Not all diagnoses are created equal. One person with low back pain may
@@ -115,7 +117,7 @@ const HowCanWeHelp = () => (
             />
             <CardContent>
               <Typography gutterBottom variant="h5" component="h2">
-                Focus On Function At An Optimal ​Level
+                <FaHandPointRight/> Focus On Function At An Optimal ​Level
               </Typography>
               <Typography variant="body2" color="textSecondary" component="p">
                 We get you back to living your best life. Just because your pain decreases

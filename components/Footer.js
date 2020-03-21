@@ -1,6 +1,16 @@
 import Link from 'next/link';
 import styled from '@emotion/styled';
 import React from "react";
+import {
+  FaCalendarAlt,
+  FaEnvelope,
+  FaHome,
+  FaFax,
+  FaPhone,
+  FaMapMarkerAlt,
+  FaClock,
+  FaPhoneSquare
+} from 'react-icons/fa';
 
 const FooterContainer = styled.div`
   display: flex;
@@ -98,11 +108,11 @@ const Address = styled.span`
 const Footer = () => (
   <FooterContainer>
     <iframe
-  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12702.08890474116!2d-121.9468222!3d37.2590417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb8b9bded7b3a58b2!2sPace%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1574991988503!5m2!1sen!2sus"
-  width="100%" height="450" frameBorder="0" allowFullScreen/>
+      src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12702.08890474116!2d-121.9468222!3d37.2590417!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb8b9bded7b3a58b2!2sPace%20Physical%20Therapy!5e0!3m2!1sen!2sus!4v1574991988503!5m2!1sen!2sus"
+      width="100%" height="450" frameBorder="0" allowFullScreen/>
     <FooterTop>
       <Boxes>
-        <a href={"https://www.facebook.com/pacephysicaltherapyinc"}><FbIcon /></a>
+        <a href={"https://www.facebook.com/pacephysicaltherapyinc"}><FbIcon/></a>
         <a href={"https://www.linkedin.com/in/vidyadevarapalli"}><LinkedInIcon/></a>
       </Boxes>
     </FooterTop>
@@ -112,26 +122,35 @@ const Footer = () => (
           <h4>Quick links</h4>
           <Column>
             <Box>
-              <Link href="/" as="/"><a>HOME</a></Link>
+              <FaHome/>
+              <Link href="/" as="/"><a> HOME</a></Link>
             </Box>
             <Box>
-              <Link href="/appointment" as="/appointment"><a>APPOINTMENT</a></Link>
+              <FaCalendarAlt/>
+              <Link href="/appointment" as="/appointment"><a> APPOINTMENT</a></Link>
             </Box>
             <Box>
-              <Link href="/contactus" as="/contactus"><a>CONTACT US</a></Link>
+              <FaPhoneSquare/>
+              <Link href="/contactus" as="/contactus"><a> CONTACT US</a></Link>
             </Box>
           </Column>
         </Box>
         <Box>
           <Column>
-            <h4>Contact Us</h4>
-            Phone Number : <a href="tel:408-628-0447">408-628-0447</a> <br/>
-            Fax : 669-201-0478 <br/>
-            <a href="mailto:info@paceptclinic.com">Email : info@paceptclinic.com</a>
+            <h4>Contact Us <FaPhoneSquare/></h4>
+            <Box>
+              <FaPhone/> Ph: <a href="tel:408-628-0447">408-628-0447</a>
+            </Box>
+            <Box>
+              <FaFax/> Fax: 669-201-0478 <br/>
+            </Box>
+            <Box>
+              <a href="mailto:info@paceptclinic.com"><FaEnvelope/> Email : info@paceptclinic.com</a>
+            </Box>
           </Column>
         </Box>
         <Box>
-          <h4>Address</h4>
+          <h4>Address <FaMapMarkerAlt/></h4>
 
           <Address>
             3880 South Bascom Ave, <br/>
@@ -142,7 +161,7 @@ const Footer = () => (
       </Boxes>
     </FooterMiddle>
     <FooterBottom>
-      Copyright @ 2019. All Rights Reserved
+      Copyright @ 2020. All Rights Reserved
     </FooterBottom>
   </FooterContainer>
 );

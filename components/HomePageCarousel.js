@@ -1,38 +1,66 @@
 import React from "react";
 import Carousel from 'react-bootstrap/Carousel';
-import HowCanWeHelp from "./HowCanWeHelp";
-import styled from '@emotion/styled';
 import {css} from "emotion";
+import styled from '@emotion/styled';
 
-const firstImage = css`
+const imageCss = css`
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   width: 100%;
-  height: 750px;
+  margin: -200px 0 -200px 0;
   
   @media (max-width: 900px) {
      width: 100%;
-     height: 400px;
+     height: auto;
      margin: 0;
   }
 `;
 
+const ImageWrapper = styled.div`
+  position: relative;
+  display: inline-block;
+  max-width: 90%;
+  max-height: 750px;
+  overflow: hidden;
+  margin: 0 5% 0 5%;
+`;
+
+const CaptionText = styled.h4`
+  color: ${props => props.light ? "white" : "black"}
+`;
+
+const SlideItem = (imageUrl, theme) => {
+  return (<Carousel.Item>
+    <ImageWrapper>
+      <img
+        className={imageCss}
+        src={imageUrl}
+        alt="Current slide"
+      />
+    </ImageWrapper>
+    <Carousel.Caption>
+      <CaptionText light={theme === "light"}>We Help Active Adults In The Bay Area Get Back To The Things They Love WITHOUT Medication,
+        Multiple
+        Doctor’s Visits, And Surgery.
+      </CaptionText>
+    </Carousel.Caption>
+  </Carousel.Item>)
+};
+
+let slides = [];
+for (let i = 1; i <= 5; i++) {
+  let textColor = "light";
+  if (i === 2 || i === 4) {
+    textColor = "dark";
+  }
+  slides.push(SlideItem("../static/pace_pt_image_" + i + ".jpeg", textColor));
+}
+
 const HomePageCarousel = () => (
   <section>
-    <Carousel interval="10000">
-      <Carousel.Item>
-        <img
-          className={firstImage}
-          src="../static/firstImage.jpg"
-          alt="First slide"
-        />
-        <Carousel.Caption>
-          <h3>We Help Active Adults In The Bay Area Get Back To The Things They Love WITHOUT Medication, Multiple
-            Doctor’s Visits, And Surgery.
-          </h3>
-        </Carousel.Caption>
-      </Carousel.Item>
-      <Carousel.Item>
-        <HowCanWeHelp/>
-      </Carousel.Item>
+    <Carousel fade={true} interval="5000">
+      {slides}
     </Carousel>
   </section>
 );

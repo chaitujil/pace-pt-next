@@ -6,6 +6,8 @@ import ExpansionPanelDetails from '@material-ui/core/ExpansionPanelDetails';
 import Typography from '@material-ui/core/Typography';
 import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 import {css} from "emotion";
+import {FaListUl} from 'react-icons/fa';
+import {FaDotCircle} from "react-icons/fa";
 
 
 const Container = styled.div`
@@ -55,7 +57,7 @@ function OurServices() {
         <Container>
           <Heading>
             <h4>
-              OUR <span className="services">SERVICES</span>
+              <FaListUl/> OUR <span className="services">SERVICES</span>
             </h4>
             We treat a variety of conditions
           </Heading>
@@ -67,7 +69,7 @@ function OurServices() {
                 aria-controls="panel1a-content"
                 id="panel1a-header"
               >
-                <Typography className={ServiceHeading}>Neck Pain</Typography>
+                <Typography className={ServiceHeading}><FaDotCircle/> Neck Pain</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
@@ -84,7 +86,7 @@ function OurServices() {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography className={ServiceHeading}>Back pain</Typography>
+                <Typography className={ServiceHeading}><FaDotCircle/> Back pain</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
@@ -104,7 +106,7 @@ function OurServices() {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography className={ServiceHeading}>Knee pain</Typography>
+                <Typography className={ServiceHeading}><FaDotCircle/> Knee pain</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
@@ -131,7 +133,7 @@ function OurServices() {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography className={ServiceHeading}>Ankle pain</Typography>
+                <Typography className={ServiceHeading}><FaDotCircle/> Ankle pain</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
@@ -150,7 +152,7 @@ function OurServices() {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography className={ServiceHeading}>Shoulder pain</Typography>
+                <Typography className={ServiceHeading}><FaDotCircle/> Shoulder pain</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
@@ -177,7 +179,7 @@ function OurServices() {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography className={ServiceHeading}>Elbow & Wrist pain</Typography>
+                <Typography className={ServiceHeading}><FaDotCircle/> Elbow & Wrist pain</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
@@ -200,7 +202,7 @@ function OurServices() {
                 aria-controls="panel2a-content"
                 id="panel2a-header"
               >
-                <Typography className={ServiceHeading}>Hip pain</Typography>
+                <Typography className={ServiceHeading}><FaDotCircle/> Hip pain</Typography>
               </ExpansionPanelSummary>
               <ExpansionPanelDetails>
                 <Typography>
