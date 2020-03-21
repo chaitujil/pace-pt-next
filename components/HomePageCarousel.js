@@ -20,10 +20,9 @@ const imageCss = css`
 const ImageWrapper = styled.div`
   position: relative;
   display: inline-block;
-  max-width: 90%;
-  max-height: 750px;
+  max-width: 100%;
+  max-height: 600px;
   overflow: hidden;
-  margin: 0 5% 0 5%;
 `;
 
 const CaptionText = styled.h4`
