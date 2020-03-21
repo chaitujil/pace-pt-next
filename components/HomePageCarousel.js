@@ -26,7 +26,13 @@ const ImageWrapper = styled.div`
 `;
 
 const CaptionText = styled.h4`
-  color: ${props => props.light ? "white" : "black"}
+  color: ${props => props.light ? "white" : "black"};
+  font-weight: bold;
+
+  @media (max-width: 900px) {
+     color: ${props => props.light ? "white" : "black"};
+     font-size: 1rem;
+  }
 `;
 
 const SlideItem = (imageUrl, theme) => {
